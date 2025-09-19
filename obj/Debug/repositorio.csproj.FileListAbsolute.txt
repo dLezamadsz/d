@@ -1,0 +1,7 @@
+C:\Users\diava\source\repos\repositorio\bin\Debug\repositorio.exe.config
+C:\Users\diava\source\repos\repositorio\bin\Debug\repositorio.exe
+C:\Users\diava\source\repos\repositorio\bin\Debug\repositorio.pdb
+C:\Users\diava\source\repos\repositorio\obj\Debug\repositorio.csproj.AssemblyReference.cache
+C:\Users\diava\source\repos\repositorio\obj\Debug\repositorio.csproj.CoreCompileInputs.cache
+C:\Users\diava\source\repos\repositorio\obj\Debug\repositorio.exe
+C:\Users\diava\source\repos\repositorio\obj\Debug\repositorio.pdb
