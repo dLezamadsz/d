@@ -52,7 +52,9 @@ namespace repositorio
             {
                 Console.WriteLine(item.Nombre() + "....." + item.Precio());
             }
-            Console.WriteLine("Usted ha pagado s/."+y+".");
+            Console.WriteLine("Usted ha pagado s/." + y + ".");
+            Console.WriteLine("Le quedan s/." + y + " disponibles.");
+            Console.ReadLine();
         }
     }
 }

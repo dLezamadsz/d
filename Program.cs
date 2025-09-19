@@ -26,7 +26,7 @@ namespace repositorio
                 switch (b)
                 {
                     default: a = false;  break;
-                    case "1": t.Compra(carrito, dinero, pagado); break;
+                    case "1": t.Compra(carrito, dinero, pagado); t.Carrito(carrito, dinero, pagado); break;
                     case "2": Console.WriteLine("¡Gracias por su compra!"); Console.ReadLine(); a = false; break;
                 }
             }
