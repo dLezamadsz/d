@@ -17,32 +17,43 @@ namespace repositorio
 
         public void Compra(List<Item> c, float x, float y)
         {
-            Console.WriteLine("Seleccionar item a comprar:");
-            for (int i = 0; i < items.Count(); i++)
+            bool a = true;
+            while (a)
             {
-                Console.WriteLine($"({i}) {items[i].Nombre()}");
-            }
-            int index = int.Parse(Console.ReadLine());
-
-            if(x<items[index].Precio() || items[index].Cantidad() == 0)
-            {
-                Console.WriteLine("No se puede realizar la operación");
-                Console.ReadLine();
-            }
-            else
-            {
+                Console.WriteLine("Seleccionar item a comprar:");
                 for (int i = 0; i < items.Count(); i++)
                 {
-                    if (i == index)
+                    Console.WriteLine($"({i}) {items[i].Precio()} {items[i].Nombre()}");
+                }
+                int index = int.Parse(Console.ReadLine());
+
+                if (x < items[index].Precio() || items[index].Cantidad() == 0)
+                {
+                    Console.WriteLine("No se puede realizar la operación");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    for (int i = 0; i < items.Count(); i++)
                     {
-                        c.Add(items[i]);
-                        Console.WriteLine($"Se ha añadido el artículo {items[i].Nombre()} al carrito");
-                        x -= items[i].Precio();
-                        y += items[i].Precio();
-                        items[i].Remover();
+                        if (i == index)
+                        {
+                            c.Add(items[i]);
+                            Console.WriteLine($"Se ha añadido el artículo {items[i].Nombre()} al carrito");
+                            x -= items[i].Precio();
+                            y += items[i].Precio();
+                            items[i].Remover();
+                        }
                     }
                 }
+                Console.WriteLine("¿Desea seguir comprando?\n(1) Sí\n(2) No");
+                string b = Console.ReadLine();
+                if (b == "2")
+                {
+                    a = false;
+                }
             }
+            
         }
 
         public void Carrito(List<Item> c, float x, float y)
